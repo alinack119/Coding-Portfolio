@@ -1,0 +1,218 @@
+/* ------------------------------------  */
+/* basic setup */
+/* ------------------------------------  */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --GIT: rgba(246, 248, 248, 0.732);
+    --b-color: rgba(70, 82, 82, 0.732);
+    --off-white: rgba(255, 255, 255, 0.776);
+    --link: rgb(215, 252, 80);
+   
+    --fs-h1: 7.5rem;
+    --fs-h2: 6rem;
+    --fs-h3: 3.5rem;
+
+    --gutter-xxsmall: 2rem;
+    --gutter-xsmall: 3rem;
+    --gutter-small: 4rem;
+    --gutter-medium: 6rem;
+    --gutter-large: 8rem;
+    --gutter-xlarge: 10rem;
+    --gutter-xxlarge: 12rem;
+    --gutter-xxxlarge: 20rem;
+    
+
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--off-white);
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+a {
+    color: var(--off-white);
+    text-decoration: none;
+    font-size: 1.125rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 4rem;
+    border: 1px solid var(--GIT);
+    font-size: 1.7rem;
+}
+
+.btn-text {
+    display: inline-block;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid var(--link);
+}
+
+
+img {
+    object-fit: contain;
+}
+
+.row {
+    max-width: 1180px;
+    margin: 0 auto;
+
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+    font-weight: 400;
+    
+}
+
+
+h2 {
+
+    font-size: 6rem;
+    /*color: var(--off-white);*/
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+    width: 12rem;
+    margin-top: 1rem;
+    background-color: rgb(215, 252, 80);
+
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+
+/* ------------------------------------  */
+/* header style */
+/* ------------------------------------  */
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("Images/Color.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.395)),url("Images/Color.jpg");    
+    /* linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)),*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+header .row {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    padding: 2.5rem;
+    height: 5.625rem;
+
+}
+
+nav a {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.header-text-container {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 9rem);
+    
+}
+
+.header-text-container p {
+    font-size: 2.7rem;
+    margin: 1rem 0 3rem;
+}
+
+h1 {
+    font-size: 7.5rem;
+}
+
+section {
+    background-color: rgba(4, 4, 4, 0.922);
+    padding: var(--gutter-xxlarge) 0;
+}
+
+/* ------------------------------------  */
+/* My Work */
+/* ------------------------------------  */
+
+.work-box {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-large);
+    margin-top: var(--gutter-xsmall);
+}
+
+.work-box:not(:last-child) {
+    margin-bottom: var(--gutter-xxxlarge);
+}
+
+.work-box-text > * {
+    margin-top: var(--gutter-xxsmall);
+}
+
+.work-box-img {
+    max-width: 800px;
+}
+
+.work-box-img img {
+    max-width: 100%;
+}
+
+
+.work-box .gh-icon {
+    height: 30px;
+}
+
+.work-box-links {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-xsmall);
+}
+
+
+.gh-link {
+    transition: all 0.3s; /* makes hover action smoother*/
+}
+
+/*hover over gh icon and make larger*/
+.gh-link:hover,
+.gh-link:focus {
+    transform: scale(1.4);
+}
+
+.gh-link img {
+    height: 2.8rem;
+}
